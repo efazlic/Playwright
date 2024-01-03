@@ -12,4 +12,6 @@ test('log out from the app', async ({ page }) => {
 
     await Logout.clickOnLogoutOption();
 
+    const logoutOption = await Logout.logout_option.isVisible();
+    expect(logoutOption).toBe(false);
 });
